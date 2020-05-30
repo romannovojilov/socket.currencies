@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Валюты</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="header">
+        <img src="/logo.svg" alt="" class="header__logo">
+        <h1 class="header__title">Курс</h1>
+    </header>
+    <div class="tabs">
+        <div data-tab="socket" class="tabs__item tabs__item_active">
+            Socket
+        </div>
+        <div data-tab="ajax" class="tabs__item">
+            Ajax
+        </div>
+        <div data-tab="log" class="tabs__item">
+            Лог
+        </div>
+    </div>
+    <div class="grid">
+        <div data-tab="socket" class="grid__item grid__item_active">
+            <div class="item item_type_header">
+                <div class="item__code">Код</div>
+                <div class="item__units">Единиц</div>
+                <div class="item__currency">Валюта</div>
+                <div class="item__course">Курс ЦБ РФ</div>
+                <div class="item__diff">Изменение</div>
+                <div class="item__actual-date">Дата записи</div>
+            </div>
+            <div id="socket-monitoring"></div>
+        </div>
+        <div data-tab="ajax" class="grid__item">
+            <div class="item item_type_header">
+                <div class="item__code">Код</div>
+                <div class="item__units">Единиц</div>
+                <div class="item__currency">Валюта</div>
+                <div class="item__course">Курс ЦБ РФ</div>
+                <div class="item__diff">Изменение</div>
+                <div class="item__actual-date">Дата записи</div>
+            </div>
+            <div id="ajax-monitoring"></div>
+        </div>
+        <div data-tab="log" class="grid__item">
+            <div id="log-monitoring"></div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="/index.js"></script>
+</body>
+</html>
